@@ -1,0 +1,13 @@
+<%= @listing.name %>
+<%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill  %>
+<br>
+
+<% @listing.bookmarks.each do |bookmark| %>
+<div>
+<%= bookmark.comment %>
+<%= bookmark.movie.title %>
+<%= link_to "Delete ⓧ", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+</div>
+<% end %>
+<div><%= link_to "add bookmark (movie)", new_listing_bookmark_path(@listing) %></div>
+<div><%= link_to "Go back to overview", root_path() %></div>
