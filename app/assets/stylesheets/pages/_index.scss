@@ -1,2 +1,80 @@
 // Import page-specific CSS files here.
 @import "home";
+
+a {
+  color: rgb(250, 249, 249);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  align-items: center;
+  background: white;
+  width: 300px;
+  height: 250px;
+  border-radius: 30px;
+  margin-left: 50px;
+}
+
+.description {
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.btn-index {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-show {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #0995FF;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+
+.btn-edit {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #0995FF;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+
+.btn-destroy {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #0995FF;
+  display: inline-block;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+.btn-destroy:hover, .btn-edit:hover, .btn-show:hover {
+  opacity: 1;
+  text-decoration: none;
+}

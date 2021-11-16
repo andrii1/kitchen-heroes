@@ -1,7 +1,9 @@
-<h1><%= @listing.name %></h1>
-<p><%= @listing.description %></p>
-<p><%= @listing.location %></p>
-<p><%= @listing.price %></p>
-<p><%= @listing.availability %></p>
-<%= link_to "Back to all listings", listings_path  %>
-<%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
+<div class='show container'>
+  <h1><%= @listing.name %></h1>
+  <p><%= @listing.description %></p>
+  <p><%= @listing.location %></p>
+  <p><%= @listing.price %></p>
+  <p><%= @listing.availability %></p>
+  <%= button_to "Back to all listings", listings_path  %>
+  <%= button_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
+</div>
