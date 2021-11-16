@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Listing.create([{ name: 'test', description: 'test2', price: '5', location: 'Paris', availability: '2021-11-17' }])
+Listing.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
