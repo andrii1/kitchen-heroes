@@ -1,13 +1,19 @@
-<%= @listing.name %>
-<%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill  %>
-<br>
-
-<% @listing.bookmarks.each do |bookmark| %>
 <div>
-<%= bookmark.comment %>
-<%= bookmark.movie.title %>
-<%= link_to "Delete ⓧ", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+  <div><h1><%= @listing.name %></h1></div>
+  <div>Description: <h3><%= @listing.description %></h3></div>
+  <div>Price: <h3><%= @listing.price %></h3>€</div>
+  <div>Location: <h3><%= @listing.location %></h3></div>
+  <div>Availability: <h3><%= @listing.availability %></h3></div>
 </div>
-<% end %>
-<div><%= link_to "add bookmark (movie)", new_listing_bookmark_path(@listing) %></div>
-<div><%= link_to "Go back to overview", root_path() %></div>
+
+<%# @listing.reviews.each do |review| %>
+  <div>
+    <%#= review.comment %>
+    <%#= review.movie.title %>
+    <%#= link_to "Delete ⓧ", review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+  </div>
+<%# end %>
+<div><%#= link_to "add review", new_listing_review_path(@listing) %></div>
+
+
+<div><%= link_to "Go back to listings", listings_path() %></div>

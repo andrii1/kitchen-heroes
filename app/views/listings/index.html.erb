@@ -1,8 +1,7 @@
 <h1>All Chefs</h1>
-
 <% @listings.each do |listing| %>
-<h2><%= listing.name %></h2>
-<h2><%= listing.description %></h2>
-<h2><%= listing.price %></h2>
-<%= link_to "see more", listing_path(listing) %>
+  <h2><strong><%= listing.name %></strong></h2>
+  <h4><strong>Description:</strong> <%= listing.description %></h4>
+  <h4> <strong>Price:</strong> <%= listing.price %> €</h4>
+  <%= link_to "See more details", listing_path(listing) %>
 <% end %>

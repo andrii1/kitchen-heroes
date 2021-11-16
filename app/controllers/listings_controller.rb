@@ -28,9 +28,9 @@ class ListingsController < ApplicationController
   #   @listing.destroy!
   # end
 
-#   private
+  # private
 
-#   def listing_params
-#     params.require(:listing).permit(:name, :description, :price, :location, :availability)
-#   end
+  # def listing_params
+  #   params.require(:listing).permit(:name, :description, :price, :location, :availability)
+  # end
 end
