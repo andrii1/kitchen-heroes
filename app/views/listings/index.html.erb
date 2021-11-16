@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
-<%= button_to 'Create new listing', new_listing_path() %>
 
-<h1>All the dishes</h1>
-<div class='card'>
-  <% @listings.each do |listing| %>
+<div class='header'>
+  <h1>All the dishes</h1>
+  <div class='btn-create'><%= link_to 'Create new listing', new_listing_path() %></div>
+</div>
+
+<% @listings.each do |listing| %>
+  <div class='card'>
+    <div class='text'>
       <h4><%= listing.name %></h4>
+    </div>
       <div class='description'>
         <h6> <strong>Description:</strong> <%= listing.description %></h6>
       </div>
@@ -13,5 +18,5 @@
         <div class='btn-edit'><%= link_to 'Edit', edit_listing_path(listing) %></div>
         <div class='btn-destroy'><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
