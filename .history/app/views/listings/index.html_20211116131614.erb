@@ -1,0 +1,10 @@
+<h1>All the restaurants</h1>
+
+<% @listings.each do |restaurant| %>
+  <div>
+    <h2><%= listing.name %></h2>
+      ★
+    <% end %>
+    <%= link_to "Destroy restaurant", destroy_restaurant_path(listing.id), method: :delete  %>
+  </div>
+<% end %>

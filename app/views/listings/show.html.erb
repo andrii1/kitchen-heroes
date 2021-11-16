@@ -1,19 +1,12 @@
+
 <div>
   <div><h1><%= @listing.name %></h1></div>
   <div><h3>Description: <%= @listing.description %></h3></div>
   <div><h3>Price: <%= @listing.price %>€</h3></div>
   <div><h3> Location: <%= @listing.location %></h3></div>
   <div><h3> Availability: <%= @listing.availability %></h3></div>
+  <p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
+  <%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
 </div>
-
-<%# @listing.reviews.each do |review| %>
-  <div>
-    <%#= review.comment %>
-    <%#= review.movie.title %>
-    <%#= link_to "Delete ⓧ", review_path(review), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
-  </div>
-<%# end %>
-<div><%#= link_to "add review", new_listing_review_path(@listing) %></div>
-
-
 <div><%= link_to "Go back to listings", listings_path() %></div>
+
