@@ -1,0 +1,11 @@
+<h1>All listings</h1>
+
+<% @pets.each do |pet| %>
+  <div>
+    <%= pet.name %>
+    <%= pet.found_on %>
+    <%= pet.species %>
+    <%= link_to "See more", pet_path(pet) %>
+    <%= link_to "Owner took back pet", destroy_pet_path(pet), method: :delete, data: {confirm: "Are you sure?"}  %>
+  </div>
+<% end %>
