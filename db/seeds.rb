@@ -6,4 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Listing.create([{ name: 'test', description: 'test2', price: '5', location: 'Paris', availability: '2021-11-17' }])
+user = User.create(email: "eichhorn@gmail.com", password: "12345678", first_name: "Pauli", last_name: "Eichhorn", owner: true)
+listing = Listing.new(name: 'test listing', description: 'this is the description', price: '10', location: 'Gemrany', availability:"Available")
+listing.user = user
+listing.save
+# user = User.create(email: "paul.eichhorn@gmail.com", password: "12345678", first_name: "Pauli", last_name: "Eichhorn", owner: true)
+
