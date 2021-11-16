@@ -1,0 +1,8 @@
+<h1><%= @listing.name %></h1>
+<p><%= @listing.description %></p>
+<p><%= @listing.location %></p>
+<p><%= @listing.price %></p>
+<p><%= @listing.availability %></p>
+<p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
+<%= link_to "Back to all listings", listings_path  %>
+<%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
