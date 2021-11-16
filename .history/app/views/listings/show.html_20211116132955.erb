@@ -1,0 +1,2 @@
+<h1><%= @listing.description %></h1>
+<%= link_to "Owner took back pet", destroy_listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
