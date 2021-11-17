@@ -53,19 +53,13 @@
       <div class='description'>
         <h6> <strong>Description:</strong> <%= listing.description %></h6>
       </div>
-      <div class='description'>
-        <h6><strong>Location:</strong> <%= listing.location %></h4>
+      <p><strong>location: </strong><%= @listing.description %></p>
+  <p><strong>Price: </strong><%= @listing.price %>€</p>
+  <p><strong>Availability: </strong><%= @listing.availability %></p>
+  <p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
+      <div class="btn-index">
+        <div class='btn-show'><%= link_to 'Show', listing_path(listing) %></div>
       </div>
-      <div class='description'>
-        <h6><strong>Price:</strong> <%= listing.price %> €</h4>
-      </div>
-      <div class='description'>
-        <h6><strong>Availability:</strong> <%= listing.availability %></h4>
-      </div>
-      <div class='description'>
-        <%= cl_image_tag listing.photo.key, height: 150, width: 200, crop: :fill %>
-      </div>
-      <div class='btn-show' style="margin-top:10px"><%= link_to 'Show', listing_path(listing) %></div>
     </div>
   <% end %>
 </div>

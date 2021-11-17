@@ -53,16 +53,16 @@
       <div class='description'>
         <h6> <strong>Description:</strong> <%= listing.description %></h6>
       </div>
-      <div class='description'>
-        <h6><strong>Location:</strong> <%= listing.location %></h4>
+      <div class='text'>
+        <h4><strong>Location:</strong><%= listing.location %></h4>
       </div>
-      <div class='description'>
-        <h6><strong>Price:</strong> <%= listing.price %> €</h4>
+      <div class='text'>
+        <h4><strong>Price:</strong><%= listing.price %></h4>
       </div>
-      <div class='description'>
-        <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+      <div class='text'>
+        <h4><strong>Availability:</strong><%= listing.availability %></h4>
       </div>
-      <div class='description'>
+      <div class='text'>
         <%= cl_image_tag listing.photo.key, height: 150, width: 200, crop: :fill %>
       </div>
       <div class='btn-show' style="margin-top:10px"><%= link_to 'Show', listing_path(listing) %></div>

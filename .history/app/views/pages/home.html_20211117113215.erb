@@ -7,11 +7,12 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://source.unsplash.com/SEFR62Upnqw/900x200/" alt="Welcome to Kitchen Heroes.">
+      <img class="d-block w-100" src="https://source.unsplash.com/08bOYnH_r_E/900x200/" alt="Welcome to Kitchen Heroes.">
       <div class="carousel-caption d-none d-md-block">
-      <h2 style="color:white; font-style:bold; ">Welcome to Kitchen Heroes!</h5>
-      <p style="color:white">We help you to find the best dishes from amazing chefs</p>
-      <%= link_to "GET INSPIRED", "/listings", class: "btn btn-secondary mr-sm-4" %>
+      <h2 style="color:black; font-style:bold">Welcome to Kitchen Heroes!</h5>
+      <p style="color:black">We help you to find the best dishes from amazing chefs</p>
+      <%= link_to "/listings", "#", class: "nav-link" %>
+      <button type="button" class="btn btn-secondary mr-sm-4">GET INSPIRED</button>
       </div>
     </div>
     <div class="carousel-item">
@@ -44,28 +45,40 @@
             </div>
         </section>
 
-<div class='cards'>
-  <% @listings.each do |listing| %>
-    <div class='card'>
-      <div class='text'>
-        <h4><%= listing.name %></h4>
-      </div>
-      <div class='description'>
-        <h6> <strong>Description:</strong> <%= listing.description %></h6>
-      </div>
-      <div class='description'>
-        <h6><strong>Location:</strong> <%= listing.location %></h4>
-      </div>
-      <div class='description'>
-        <h6><strong>Price:</strong> <%= listing.price %> €</h4>
-      </div>
-      <div class='description'>
-        <h6><strong>Availability:</strong> <%= listing.availability %></h4>
-      </div>
-      <div class='description'>
-        <%= cl_image_tag listing.photo.key, height: 150, width: 200, crop: :fill %>
-      </div>
-      <div class='btn-show' style="margin-top:10px"><%= link_to 'Show', listing_path(listing) %></div>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      Pasta
     </div>
-  <% end %>
-</div>
+    <div class="col">
+      Pizza
+    </div>
+    <div class="col">
+      Salad
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      Burger
+    </div>
+    <div class="col">
+      Steaks
+    </div>
+    <div class="col">
+      Soups
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+      Tacos
+    </div>
+    <div class="col">
+      Fish
+    </div>
+    <div class="col">
+      Vegetarian
+    </div>
+  </div>
+ </div>
+ </body>
+</html>
