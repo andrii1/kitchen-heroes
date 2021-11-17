@@ -1,24 +1,25 @@
+<p id="notice"><%= notice %></p>
 
 <div class='header'>
   <h1>All the dishes</h1>
-  <div class='btn-create'><%= link_to 'Create new listing', new_listing_path() %></div>
-</div>
+   <div class='btn-create'><%= link_to 'Create new listing', new_listing_path() %></div>
+ </div>
 
 <div class='cards'>
   <% @listings.each do |listing| %>
     <div class='card'>
+    <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 298, crop: :fill %></p>
       <div class='text'>
         <h4><%= listing.name %></h4>
       </div>
-        <div class='description'>
-          <h6> <strong>Description:</strong> <%= listing.description %></h6>
-        </div>
-        <div class="btn-index">
-          <div class='btn-show'><%= link_to 'Show', listing_path(listing) %></div>
-          <div class='btn-edit'><%= link_to 'Edit', edit_listing_path(listing) %></div>
-          <div class='btn-destroy'><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </div>
+      <div class='description'>
+        <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
+      </div>
+      <div class="btn-index">
+        <div class='btn-show'><%= link_to 'Show', listing_path(listing) %></div>
+        <div class='btn-edit'><%= link_to 'Edit', edit_listing_path(listing) %></div>
+        <div class='btn-destroy'><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
     </div>
   <% end %>
 </div>
-
