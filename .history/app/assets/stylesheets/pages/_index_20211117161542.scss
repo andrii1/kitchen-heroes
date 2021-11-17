@@ -15,7 +15,7 @@ footer {
 }
 
 a {
-  color:#0E0000;
+  color: rgb(250, 249, 249);
   text-decoration: none;
 }
 
@@ -24,29 +24,16 @@ a:hover {
   text-decoration: none;
 }
 
-.btn-show a {
-  color: rgb(250, 249, 249);
-}
-
-.btn-edit a {
-  color: rgb(250, 249, 249);
-}
-
-.btn-destroy a {
-  color: rgb(250, 249, 249);
-}
-
-.btn-secondary a {
-  color: rgb(250, 249, 249);
-}
+body > div > div.content-container > div > div > div > a:nth-child(3)
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  margin-left: 40px;
 }
 
 
@@ -98,7 +85,6 @@ a:hover {
   margin-right: 15px;
   border-radius: 30px;
   opacity: 0.8;
-  color: rgb(250, 249, 249);
 }
 .btn-edit {
   padding: 8px 18px;
@@ -109,7 +95,6 @@ a:hover {
   margin-right: 15px;
   border-radius: 30px;
   opacity: 0.8;
-  color: rgb(250, 249, 249);
 }
 
 .btn-destroy {
@@ -120,7 +105,6 @@ a:hover {
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
-  color: rgb(250, 249, 249);
 }
 
 .btn-secondary {
@@ -128,7 +112,6 @@ a:hover {
   border: #B38D97 1px solid;
   border-radius: 30px;
   padding: 10px 24px;
-  color: rgb(250, 249, 249);
 }
 
 .btn-create {
@@ -139,7 +122,6 @@ a:hover {
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
-  color: rgb(250, 249, 249);
  }
 
 .btn-destroy:hover, .btn-edit:hover, .btn-show:hover, .btn-create:hover,.btn-all:hover {
@@ -155,12 +137,4 @@ a:hover {
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
-}
-
-#map {
-  position: sticky;
-  top: 0;
-  margin-left: 40px;
-  border-radius: 30px;
-  margin-top: 30px;
 }

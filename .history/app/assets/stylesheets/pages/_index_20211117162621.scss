@@ -36,17 +36,14 @@ a:hover {
   color: rgb(250, 249, 249);
 }
 
-.btn-secondary a {
-  color: rgb(250, 249, 249);
-}
-
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  margin-left: 40px;
 }
 
 
@@ -155,12 +152,4 @@ a:hover {
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
-}
-
-#map {
-  position: sticky;
-  top: 0;
-  margin-left: 40px;
-  border-radius: 30px;
-  margin-top: 30px;
 }
