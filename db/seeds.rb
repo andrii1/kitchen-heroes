@@ -19,8 +19,8 @@ user3 = User.create!(email: "user3@gmail.com", password: "12345678", first_name:
 puts 'users created'
 
 listing1 = Listing.new(name: 'Paul-Henri Eichhorn', description: 'I love cooking. I am not a professional cook but I am a good cook. I can cook anything really I just need one day preperation.', price: '420', location: 'Goltsteinstr. 150, Cologne, Germany', availability:"2021-12-20")
-listing2 = Listing.new(name: 'Marie-Luise Bier', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '500', location: 'Copenhagen', availability:"2021-11-17")
-listing3 = Listing.new(name: 'Andrii Gorokhovskyi', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '450', location: 'Berlin', availability: "2022-01-17")
+listing2 = Listing.new(name: 'Marie-Luise Bier', description: 'I worked as a cook for more than 5 years. I can cook any french dish. My specialty is steak tartare', price: '500', location: 'Rudower Straße 44, Berlin, Germany', availability:"2021-11-17")
+listing3 = Listing.new(name: 'Andrii Gorokhovskyi', description: 'I am a professioal cook since 2010. I worked in multiple micheline star restaurants. My specialty is PIGEONNEAUX TRUFFÉS À LA CRÈME', price: '450', location: 'Heerweg 671, Bremen, Germany', availability: "2022-01-17")
 
 puts 'listings created'
 file1 = URI.open('https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_1280.jpg')
