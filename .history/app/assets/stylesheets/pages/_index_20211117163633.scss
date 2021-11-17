@@ -55,13 +55,11 @@ a:hover {
 
 .cards-home {
   display: flex;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
- .cards-home .card {
-  margin-left:30px;
 }
 
 
