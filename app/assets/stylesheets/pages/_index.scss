@@ -1,4 +1,19 @@
 @import "home";
+
+.page-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 150px; /* height of your footer */
+}
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
 a {
   color: rgb(250, 249, 249);
   text-decoration: none;
@@ -37,11 +52,11 @@ a:hover {
   align-items: center;
   background: white;
   width: 300px;
-  height: 350px;
   border-radius: 30px;
   margin-top: 30px;
   margin-bottom: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 10px;
 }
 
 
@@ -53,16 +68,17 @@ a:hover {
   margin-right: 5px;
 }
 .btn-index {
-  position: absolute;
+
   bottom: 10px;
   display: flex;
   justify-content: center;
+  margin-top:10px
 }
 .btn-show {
   padding: 8px 18px;
   border-radius: 8px;
   text-decoration: none;
-  background-color: #0995FF;
+  background-color: #424B54;
   display: inline-block;
   margin-right: 15px;
   border-radius: 30px;
@@ -72,7 +88,7 @@ a:hover {
   padding: 8px 18px;
   border-radius: 8px;
   text-decoration: none;
-  background-color: #0995FF;
+  background-color: #EBCFB2;
   display: inline-block;
   margin-right: 15px;
   border-radius: 30px;
@@ -83,16 +99,24 @@ a:hover {
   padding: 8px 18px;
   border-radius: 8px;
   text-decoration: none;
-  background-color: #0995FF;
+  background-color: #D5ACA9;
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
 }
+
+.btn-secondary {
+  background-color: #B38D97;
+  border: #B38D97 1px solid;
+  border-radius: 30px;
+  padding: 10px 24px;
+}
+
 .btn-create {
   padding: 15px 24px;
   border-radius: 8px;
   text-decoration: none;
-  background-color: #0995FF;
+  background-color: #B38D97;
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
