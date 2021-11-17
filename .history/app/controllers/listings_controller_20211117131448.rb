@@ -6,11 +6,11 @@ class ListingsController < ApplicationController
         lat: listing.latitude,
         lng: listing.longitude
       }
-    end
   end
 
   def new
     @listing = Listing.new
+    #@listing = Listing.find(params[:id])
   end
 
   def show
