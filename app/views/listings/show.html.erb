@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class='show container'>
   <h1><%= @listing.name %></h1>
   <p><%= @listing.description %></p>
@@ -6,12 +7,22 @@
   <p><%= @listing.availability %></p>
   <%= button_to "Back to all listings", listings_path  %>
   <%= button_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %>
+=======
+
+<div class='show container'>
+>>>>>>> 377a12cc1beeb4d598b29ea57447bcd8c1b67ead
   <h1><strong><%= @listing.name %></strong></h1>
   <p><strong>Description: </strong><%= @listing.description %></p>
   <p><strong>location: </strong><%= @listing.location %></p>
   <p><strong>Price: </strong><%= @listing.price %>€</p>
   <p><strong>Availability: </strong><%= @listing.availability %></p>
   <p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
+<<<<<<< HEAD
+=======
+  <div class='btn-all'><%= link_to "Back to all listings", listings_path %></div>
+  <div class='btn-all'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
+</div>
+>>>>>>> 377a12cc1beeb4d598b29ea57447bcd8c1b67ead
 
   <div class='btn-all'><%= link_to "Back to all listings", listings_path %></div>
   <div class='btn-all'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
