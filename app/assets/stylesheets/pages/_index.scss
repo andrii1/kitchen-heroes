@@ -1,4 +1,3 @@
-// Import page-specific CSS files here.
 @import "home";
 
 .page-container {
@@ -35,8 +34,10 @@ a:hover {
   margin-left: 40px;
 }
 
-.text {
-  margin-top: 10px ;
+
+.card img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .header {
@@ -58,6 +59,7 @@ a:hover {
   padding-bottom: 10px;
 }
 
+
 .description {
   margin-top: 15px;
   justify-content: center;
@@ -65,7 +67,6 @@ a:hover {
   margin-left: 10px;
   margin-right: 5px;
 }
-
 .btn-index {
 
   bottom: 10px;
@@ -73,7 +74,6 @@ a:hover {
   justify-content: center;
   margin-top:10px
 }
-
 .btn-show {
   padding: 8px 18px;
   border-radius: 8px;
@@ -84,7 +84,6 @@ a:hover {
   border-radius: 30px;
   opacity: 0.8;
 }
-
 .btn-edit {
   padding: 8px 18px;
   border-radius: 8px;
@@ -118,9 +117,10 @@ a:hover {
   border-radius: 8px;
   text-decoration: none;
   background-color: #B38D97;
+  display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
-}
+ }
 
 .btn-destroy:hover, .btn-edit:hover, .btn-show:hover, .btn-create:hover,.btn-all:hover {
   opacity: 1;
