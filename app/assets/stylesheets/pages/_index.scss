@@ -19,8 +19,10 @@ a:hover {
   margin-left: 40px;
 }
 
-.text {
-  margin-top: 10px ;
+
+.card img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .header {
@@ -32,23 +34,16 @@ a:hover {
 }
 
 .card {
-  width: 300px;
-  height: 250px;
-  border-radius: 30px;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  margin-right: 50px;
   align-items: center;
   background: white;
   width: 300px;
-  height: 250px;
+  height: 350px;
   border-radius: 30px;
   margin-top: 30px;
   margin-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }
+
 
 .description {
   margin-top: 15px;
