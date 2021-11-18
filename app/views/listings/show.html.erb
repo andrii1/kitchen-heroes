@@ -12,5 +12,6 @@
   </ul>
   <p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
   <div class='btn btn-secondary mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
+  <div class='btn btn-secondary mr-sm-4'><%= link_to "Book Chef", new_listing_booking_path(@listing) %></div>
   <div class='btn btn-secondary mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
 </div>
