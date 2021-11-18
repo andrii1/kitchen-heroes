@@ -1,0 +1,212 @@
+@import "home";
+
+.page-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 150px; /* height of your footer */
+}
+
+.content-container {
+  margin-top: -24px;
+}
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+a {
+  color:#0E0000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.btn-create a {
+  color: rgb(250, 249, 249);
+}
+
+.btn-show a {
+  color: rgb(250, 249, 249);
+}
+
+.btn-edit a {
+  color: rgb(250, 249, 249);
+}
+
+.btn-destroy a {
+  color: rgb(250, 249, 249);
+}
+
+.btn-secondary a {
+  color: rgb(250, 249, 249);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cards-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+ .cards-home .card {
+  margin-left:30px;
+}
+
+
+.card img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.header {
+  // display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top:30px
+}
+
+.card {
+  align-items: center;
+  background: white;
+  width: 300px;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 10px;
+}
+
+
+.description {
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.btn-index {
+
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top:10px
+}
+.btn-show {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #424B54;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.btn-primary {
+  padding: 4px 18px;
+  margin-left:10px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #424B54;
+  border: 1px solid #424B54;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+  height: 40px;
+}
+
+.btn-primary:hover {
+  background-color: #2b2e32;
+}
+
+.btn-edit {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #EBCFB2;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.btn-destroy {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #D5ACA9;
+  display: inline-block;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.btn-secondary {
+  background-color: #B38D97;
+  border: #B38D97 1px solid;
+  border-radius: 30px;
+  padding: 10px 24px;
+  color: rgb(250, 249, 249);
+}
+
+.btn-create {
+  padding: 15px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #B38D97;
+  display: inline-block;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+ }
+
+.btn-destroy:hover, .btn-edit:hover, .btn-show:hover, .btn-create:hover,.btn-all:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.btn-all {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #0995FF;
+  display: inline-block;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+
+#map {
+  margin-top: 0px;
+  min-width: 100vh;
+}
+
+.form-search input {
+  border-radius: 30px;
+  width: 200px;
+
+}
+
+.form-search btn {
+  width: 10px;
+
+}

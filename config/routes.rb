@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :pages, except: :home do
-    resources :listings, only: [ :new, :create ]
+  get "dashboard", to: 'pages#dashboard'
+  resources :listings do
+    resources :bookings, only: [:new, :create]
   end
-  resources :listings, only: :destroy
 end

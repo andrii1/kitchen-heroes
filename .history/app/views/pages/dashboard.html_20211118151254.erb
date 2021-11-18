@@ -1,0 +1,57 @@
+<h2>Bookings</h2>
+<h2>Listings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Banner url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= garden.name %></td>
+        <td><%= garden.banner_url %></td>
+        <td><%= link_to 'Show', garden %></td>
+        <td><%= link_to 'Edit', edit_garden_path(garden) %></td>
+        <td><%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<div class="container">
+
+  <div class='cards-home'>
+  <div class="row">
+    <% @listings.each do |listing| %>
+    <div class="col">
+      <%= link_to listing_path(listing) do %>
+        <div class='card'>
+          <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 298, crop: :fill %></p>
+            <div class='text'>
+              <h4><%= listing.name %></h4>
+            </div>
+            <div class='description'>
+              <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
+            </div>
+            <div class='description'>
+              <h6><strong>Location:</strong> <%= listing.location %></h4>
+            </div>
+            <div class='description'>
+              <h6><strong>Price:</strong> <%= listing.price %> €</h4>
+            </div>
+            <div class='description'>
+              <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
