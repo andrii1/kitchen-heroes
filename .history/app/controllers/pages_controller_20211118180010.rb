@@ -16,4 +16,11 @@ class PagesController < ApplicationController
     end
   end
 
+  def accept
+
+  end
+
+  def reject
+  end
+
 end

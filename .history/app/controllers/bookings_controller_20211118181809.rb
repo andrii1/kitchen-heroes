@@ -17,17 +17,22 @@ class BookingsController < ApplicationController
   end
 
   def accept
-    @booking = Booking.find(params[:booking_id])
-    @booking.status = "accepted"
-    @booking.save
-    redirect_to dashboard_path
+    @booking = Booking.find(booking_params)
+    @booking.update_column(:status, "accepted")
   end
 
   def reject
-    @booking = Booking.find(params[:booking_id])
-    @booking.status = "rejected"
-    @booking.save
-    redirect_to dashboard_path
+    @booking = Booking.find(booking_params)
+    @booking.update_column(:status, "rejected")
+  end
+
+  def update
+    @listing = Listing.find(params[:id])
+    if @listing.update(listing_params)
+      redirect_to @listing, notice: 'Listing was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   private

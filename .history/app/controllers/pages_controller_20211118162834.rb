@@ -15,5 +15,4 @@ class PagesController < ApplicationController
     @bookings_requests = Booking.where(listing_id: @my_listings.pluck(:id))
     end
   end
-
 end

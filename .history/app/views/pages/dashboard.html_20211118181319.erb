@@ -20,10 +20,8 @@
         <td><%= booking.user.first_name %></td>
         <td><%= booking.date_booking %></td>
         <td><%= booking.status %></td>
-        <% if (booking.status == "pending")  %>
-        <td class="edit"><%= link_to("accept", accept_path(booking_id: booking.id), method: :patch) %></td>
-        <td class="destroy"><%= link_to("reject", reject_path, method: :patch) %></td>
-        <% end %>
+        <td class="edit"><%= link_to("accept", accept_path, method: :patch) %></td>
+        <td class="destroy"><%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% else %>
