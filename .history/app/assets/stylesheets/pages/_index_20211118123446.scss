@@ -9,10 +9,8 @@
 }
 
 .content-container {
-  margin-top: 0px;
+  margin-top: -24px;
 }
-
-#map {margin-top:-16px!important;}
 
 footer {
  position: absolute;
@@ -26,7 +24,7 @@ a {
 }
 
 a:hover {
-  color:#424B54;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -51,9 +49,9 @@ a:hover {
 }
 
 .cards {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
@@ -80,7 +78,7 @@ a:hover {
   // display: flex;
   margin: auto;
   // justify-content: center;
-  width: 300px;
+  width: 100px;
   margin-top:30px
 }
 
@@ -212,8 +210,4 @@ a:hover {
 .form-search btn {
   width: 10px;
 
-}
-
-.show img {
-  border-radius: 30px;
 }

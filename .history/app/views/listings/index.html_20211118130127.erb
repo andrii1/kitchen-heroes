@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<div id="map"
+  style="width: auto; height: 300px;"
+  class="my-4"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<div class='header'>
+  <h1>All chefs</h1>
+<%= form_tag listings_path, class: "form-search d-flex", method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a chef"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+</div>
+
+<div class="container d-flex">
+<div class="row">
+  <div class='cards'>
+    <% @listings.each do |listing| %>
+    <div class="col col-sm col-md">
+      <div class='card'>
+      <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 298, crop: :fill %></p>
+        <div class='text'>
+          <h4><%= listing.name %></h4>
+        </div>
+        <div class='description'>
+          <h6> <strong>Description:</strong> <%= listing.description.first(70)%> ...</h6>
+        </div>
+        <div class='description'>
+          <h6><strong>Location:</strong> <%= listing.location %></h4>
+        </div>
+        <div class='description'>
+          <h6><strong>Price:</strong> <%= listing.price %> €</h4>
+        </div>
+        <div class='description'>
+          <h6><strong>Availability:</strong> <%= listing.availability %></h4>
+        </div>
+        <div class="btn-index">
+          <div class='btn-show'><%= link_to 'Show', listing_path(listing) %></div>
+          <div class='btn-edit'><%= link_to 'Edit', edit_listing_path(listing) %></div>
+          <div class='btn-destroy'><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
+      </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
