@@ -8,10 +8,6 @@
  padding-bottom: 150px; /* height of your footer */
 }
 
-.content-container {
-  margin-top: -24px;
-}
-
 footer {
  position: absolute;
  bottom: 0;
@@ -50,7 +46,7 @@ a:hover {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
   align-items: center;
@@ -76,7 +72,9 @@ a:hover {
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-top:30px
 }
 
@@ -130,7 +128,7 @@ a:hover {
   border-radius: 30px;
   opacity: 0.8;
   color: rgb(250, 249, 249);
-  height: 40px;
+  height: 10px;
 }
 
 .btn-primary:hover {
@@ -195,11 +193,9 @@ a:hover {
 }
 
 #map {
-  margin-top: 0px;
-  min-width: 100vh;
-}
-
-.form-search input {
+  position: sticky;
+  top: 0;
+  margin-left: 40px;
   border-radius: 30px;
-
+  margin-top: 30px;
 }

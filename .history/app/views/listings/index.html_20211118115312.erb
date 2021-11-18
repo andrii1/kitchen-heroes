@@ -1,28 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-
-
-  
-
-<div id="map"
-  style="width: auto; height: 300px;"
-  class="my-4"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
-<div class='header'>
-  <h1>All the dishes</h1>
-<%= form_tag listings_path, class: "form-search d-flex", method: :get do %>
+<%= form_tag listings_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a chef"
+    placeholder: "Find a movie"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-</div>
 
+<div class='header'>
+  <h1>All the dishes</h1>
+
+ <div class='btn-create'><%= link_to 'Create new listing', new_listing_path() %></div>
+</div>
 <div class="container d-flex">
 
   <div class='cards'>
@@ -52,4 +43,12 @@
       </div>
     <% end %>
   </div>
+
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     class="my-4"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
 </div>
