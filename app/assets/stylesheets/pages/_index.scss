@@ -214,8 +214,36 @@ a:hover {
 
 }
 
-.show img {
-  border-radius: 30px;
+//next section is for the show
+
+.show-container {
+  display: flex;
+}
+
+.info-text {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.show-container {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  background-color: white;
+  box-shadow: rgb(153, 138, 138) 0px 8px 14px;
+  margin-bottom: 16px;
+  border-color: black;
+  border: 2px;
+}
+
+.show-container img {
+  height: 450px;
+  width: 600px;
 }
 
 td {
