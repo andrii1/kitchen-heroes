@@ -1,6 +1,6 @@
 <div class='show container my-4'>
   <h1><strong><%= @listing.name %></strong></h1>
-  <p class="py-3"><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
+  <p><%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %></p>
   <p><strong>Description: </strong><%= @listing.description %></p>
   <p><strong>location: </strong><%= @listing.location %></p>
   <p><strong>Price: </strong><%= @listing.price %>€</p>

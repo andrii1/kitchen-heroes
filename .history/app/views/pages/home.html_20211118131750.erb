@@ -65,6 +65,9 @@
           <div class='description'>
             <h6><strong>Availability:</strong> <%= listing.availability %></h4>
           </div>
+          <div class="btn-index">
+            <div class='btn-show'><%= link_to 'Show', listing_path(listing) %></div>
+          </div>
         </div>
       <% end %>
       </div>
