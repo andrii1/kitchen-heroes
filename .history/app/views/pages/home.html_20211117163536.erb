@@ -34,16 +34,17 @@
 
 <!-- About section-->
 <section id="about" class="my-4">
-  <div class="container">
-    <div class="row justify-content-center">
+            <div class="container px-4 my-8">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>hungry and don't feel like cooking?</h2>
+                        <p class="lead">have a look!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h5>hungry and don't feel like cooking?</h5><br>
-
-    </div>
-  </div>
-</section>
-
-<div class='cards-home'>
+<div class='cards'>
     <% @listings.each do |listing| %>
       <div class='card'>
       <p> <%=  cl_image_tag listing.photo.key, height: 150, width: 298, crop: :fill %></p>
