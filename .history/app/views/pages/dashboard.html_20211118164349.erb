@@ -5,10 +5,9 @@
 <table>
   <thead>
     <tr>
-    <th>Booked chef</th>
+    <th style="padding:10px">Booked chef</th>
     <th>Who booked</th>
-    <th>Date</th>
-    <th>Status</th>
+    <th colspan="3">Date</th>
     </tr>
   </thead>
 
@@ -19,11 +18,7 @@
         <td><%= booking.listing.name %></td>
         <td><%= booking.user.first_name %></td>
         <td><%= booking.date_booking %></td>
-        <td><%= booking.status %></td>
-        <% if (booking.status == "pending")  %>
-        <td class="edit"><%= link_to("accept", accept_path(booking_id: booking.id), method: :patch) %></td>
-        <td class="destroy"><%= link_to("reject", reject_path, method: :patch) %></td>
-        <% end %>
+
       </tr>
     <% end %>
     <% else %>

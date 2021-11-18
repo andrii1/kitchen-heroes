@@ -12,8 +12,7 @@ class PagesController < ApplicationController
     @user_bookings = current_user.bookings
     if @chef
     @my_listings = current_user.listings
-    @bookings_requests = Booking.where(listing_id: @my_listings.pluck(:id))
+    @my_bookings = Booking.where(listing_id: @my_listings.pluck(:id))
     end
   end
-
 end
