@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div class='header'>
-<%= form_tag listings_path, class: "form-search d-flex", method: :get do %>
+
+<%= form_tag listings_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
@@ -8,7 +8,9 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-  <h1>All chefs</h1>
+
+<div class='header'>
+  <h1>All the dishes</h1>
 
  <div class='btn-create'><%= link_to 'Create new listing', new_listing_path() %></div>
 </div>

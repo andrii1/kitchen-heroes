@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class='header'>
-<%= form_tag listings_path, class: "form-search d-flex", method: :get do %>
+<%= form_tag listings_path, class: "form-search", method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
