@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+.card-container {
+  margin: auto;
+  width: 60vw;
+}
+
+.cards-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 0;
+  width: 100%;
+  .fa-arrow-right {
+    color: #B38D97;
+  }
+  i {
+    font-size: 40px;
+  }
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  padding-top: 3.6em;
+  margin: 0px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: $body-bg;
+  transition: 0.4s;
+  border: none;
+  i {
+    padding: 0.2em;
+    color: #B38D97;
+    font-size: 60px;
+  }
+  h3 {
+    padding: 0.2em;
+    color: #B38D97;
+    font-size: 20px;
+    text-align: center;
+  }
+}

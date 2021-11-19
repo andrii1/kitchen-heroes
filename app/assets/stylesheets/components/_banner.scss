@@ -1,0 +1,30 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: auto;
+  strong {
+    color: $blue;
+  }
+  #banner-text {
+    color: $white;
+  }
+  .wrapper {
+    padding-top: 1em;
+    border-radius: 10px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    input {
+      border-radius: 10px;
+    }
+  }
+  .home-banner {
+    position: absolute;
+    left: 100px;
+
+  }
+
+
+}
