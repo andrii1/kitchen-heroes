@@ -1,0 +1,49 @@
+<div class="container my-4">
+<div class="row">
+<div class="col">
+<h2>My bookings</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Bookings</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.date %></td>
+        <td class="show"><%= link_to 'Show', listing %></td>
+        <td class="edit"><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td class="destroy"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="col">
+<h2>Listings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chef's name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.name %></td>
+        <td class="show"><%= link_to 'Show', listing %></td>
+        <td class="edit"><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td class="destroy"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <%= simple_form_for(@listing) do |f| %>
+        <%= f.input :name :input_html => { :class => 'booking-input' } %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :location %>
+        <%= f.input :availability %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit "Submit", class: "btn btn-secondary mr-sm-4" %>
+      <% end %>
+    </div>
+  </div>
+</div>

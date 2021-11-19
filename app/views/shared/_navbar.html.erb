@@ -31,10 +31,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Listings", "/listings", class: "nav-link mt-1" %>
+          <%= link_to "Chefs", "/listings", class: "nav-link mt-1" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Create listing", "/listings/new", class: "btn btn-secondary mx-3" %>
+          <%= link_to "Add a chef", "/listings/new", class: "btn btn-secondary mx-3" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://res.cloudinary.com/dgarvanzw/image/upload/v1637142348/Sample_User_Icon_r2zlx0.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

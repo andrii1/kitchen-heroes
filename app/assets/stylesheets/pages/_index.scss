@@ -77,11 +77,11 @@ a:hover {
 }
 
 .header {
-  // display: flex;
+  text-align: center;
+  align-items: center;
   margin: auto;
-  // justify-content: center;
   width: 300px;
-  margin-top:30px
+  margin-top:20px
 }
 
 .card {
@@ -139,6 +139,7 @@ a:hover {
 
 .btn-primary:hover {
   background-color: #2b2e32;
+  border: 1px solid #2b2e32;
 }
 
 .btn-edit {
@@ -157,10 +158,25 @@ a:hover {
   padding: 8px 18px;
   border-radius: 8px;
   text-decoration: none;
+  background-color: #fe6f65;
+  display: inline-block;
+  border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.btn-book {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
   background-color: #D5ACA9;
   display: inline-block;
   border-radius: 30px;
   opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.btn-book a {
   color: rgb(250, 249, 249);
 }
 
@@ -250,8 +266,12 @@ td {
   padding: 10px 10px 5px 0px;
 }
 
-.destroy a {
+.book a {
   color:#D5ACA9;
+}
+
+.destroy a {
+  color:#fe6f65;
 }
 
 .edit a {
@@ -260,4 +280,12 @@ td {
 
 .show a {
   color:#424B54;
+}
+
+th {
+  padding: 10px 10px 10px 0px;
+}
+
+.booking-input {
+  border-radius: 30px;
 }
