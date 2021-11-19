@@ -49,13 +49,13 @@ booking1.listing = listing1
 booking2.listing = listing2
 booking3.listing = listing3
 
-booking1.user = user1
-booking2.user = user2
-booking3.user = user3
+booking1.user1 = user1
+booking2.user2 = user2
+booking3.user3 = user3
 
-review1.booking = booking1
-review2.booking = booking2
-review3.booking = booking3
+review.booking1 = booking1
+review.booking2 = booking2
+review.booking3 = booking3
 
 listing1.save
 listing2.save

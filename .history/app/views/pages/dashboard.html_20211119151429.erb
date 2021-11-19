@@ -1,0 +1,67 @@
+<div class="container my-4">
+<div class="row">
+<div class="col">
+<h2>My bookings</h2>
+<table>
+  <thead>
+    <tr>
+    <th>Booked chef</th>
+    <th>Who booked</th>
+    <th>Date</th>
+    <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% if @bookings_requests %>
+    <% @bookings_requests.each do |booking| %>
+      <tr>
+        <td><%= booking.listing.name %></td>
+        <td><%= booking.user.first_name %></td>
+        <td><%= booking.date_booking %></td>
+        <td><%= booking.status %></td>
+        <% if (booking.status == "pending")  %>
+        <td class="edit"><%= link_to("accept", accept_path(booking_id: booking.id), method: :patch) %></td>
+        <td class="destroy"><%= link_to("reject", reject_path, method: :patch) %></td>
+        <% end %>
+      </tr>
+      <tr>
+
+      <%= simple_form_for([ booking, @review ]) do |f| %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit %>
+      <% end %>
+
+      </tr>
+    <% end %>
+    <% else %>
+    <p>You don't have any booking requests yet</p>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div class="col">
+<h2>Available chefs</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chef's name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.name %></td>
+        <td class="show"><%= link_to 'Show', listing %></td>
+        <td class="edit"><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td class="destroy"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

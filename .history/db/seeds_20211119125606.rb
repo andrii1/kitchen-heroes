@@ -31,31 +31,11 @@ listing1.photo.attach(io: file1, filename: 'download.jpg', content_type: 'image/
 listing2.photo.attach(io: file2, filename: 'steak.jpg', content_type: 'image/jpg')
 listing3.photo.attach(io: file3, filename: 'pigeon.jpg', content_type: 'image/jpg')
 
-review1 = Review.new(content: 'This chef has done an amazing job on our birthday party! The food was delicious and everyone was very happy')
-review2 = Review.new(content: 'OK chef for a good price')
-review3 = Review.new(content: 'An outstanding chef. I would recommend for everyone - either for a small or big event. Service was also really good!')
-
-booking1 = Booking.new(date_booking: '2021-11-20')
-booking2 = Booking.new(date_booking: '2021-11-23')
-booking3 = Booking.new(date_booking: '2021-11-25')
-
 puts 'saving.....'
 
 listing1.user = user1
 listing2.user = user2
 listing3.user = user3
-
-booking1.listing = listing1
-booking2.listing = listing2
-booking3.listing = listing3
-
-booking1.user = user1
-booking2.user = user2
-booking3.user = user3
-
-review1.booking = booking1
-review2.booking = booking2
-review3.booking = booking3
 
 listing1.save
 listing2.save

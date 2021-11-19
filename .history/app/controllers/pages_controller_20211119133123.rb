@@ -8,9 +8,9 @@ class PagesController < ApplicationController
   def dashboard
     @bookings = Booking.all
     @listings = Listing.all
-    @review = Review.new
     @chef = current_user.listings.any?
     @user_bookings = current_user.bookings
+    @review
     if @chef
     @my_listings = current_user.listings
     @bookings_requests = Booking.where(listing_id: @my_listings.pluck(:id))

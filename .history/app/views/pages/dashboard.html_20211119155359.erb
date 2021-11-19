@@ -79,7 +79,7 @@
       </div>
 
 
-      <%= simple_form_for([ ubooking, @review ], remote: true) do |f| %>
+      <%= simple_form_for([ ubooking, @review ]) do |f| %>
       <%= f.input :content, as: :text %>
       <%= f.button :submit %>
       <% end %>

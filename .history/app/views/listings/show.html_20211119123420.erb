@@ -15,7 +15,14 @@
         <li><h6> <%= booking.date_booking%></h6></li>
       <% end %>
     </ul>
-    <div id="reviews" class="my-4 font-italic">
+    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
+
+    <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
+    <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
+  </div>
+
+
+  <div id="reviews">
   <% if @listing.reviews.blank? %>
     Be the first to leave a review for <%= @listing.name %>
   <% else %>
@@ -24,15 +31,5 @@
     <% end %>
   <% end %>
   </div>
-    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
-
-    <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
-    <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
-  </div>
-
-
-
-
-
 
 </div>
