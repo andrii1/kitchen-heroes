@@ -139,7 +139,6 @@ a:hover {
 
 .btn-primary:hover {
   background-color: #2b2e32;
-  border: 1px solid #2b2e32;
 }
 
 .btn-edit {
@@ -286,6 +285,17 @@ th {
   padding: 10px 10px 10px 0px;
 }
 
-.booking-input {
+.new-booking input[type=submit] {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #D5ACA9;
+  display: inline-block;
   border-radius: 30px;
+  opacity: 0.8;
+  color: rgb(250, 249, 249);
+}
+
+.new-booking a {
+  color: rgb(250, 249, 249);
 }

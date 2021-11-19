@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <%= simple_form_for [ @listing, @booking ] do |f| %>
-        <%= f.input :date_booking, :input_html => { :class => 'booking-input' } %>
+        <%= f.input :date_booking, class: "booking-input" %>
         <%= f.submit "Book now", class: "btn w-100 btn-book" %>
       <% end %>
     </div>
