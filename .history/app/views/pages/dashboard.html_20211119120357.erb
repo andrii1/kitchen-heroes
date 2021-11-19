@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-  <% if @bookings_requests %>
+  <% if @bookings_requests.any %>
     <% @bookings_requests.each do |booking| %>
       <tr>
         <td><%= booking.listing.name %></td>

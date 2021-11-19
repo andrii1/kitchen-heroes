@@ -8,14 +8,14 @@
 </div>
 
 <div class='header'>
-  <h1 class="ml-5">All chefs</h1>
+  <h1>All chefs</h1>
 <%= form_tag listings_path, class: "form-search d-flex", method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find a chef"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "btn btn-show" %>
 <% end %>
 </div>
 
