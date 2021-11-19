@@ -26,8 +26,10 @@
   </div>
     <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
 
-    <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
-    <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
+    <% if current_user == @listing.user %>
+      <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
+      <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
+    <% end %>
   </div>
 
 
