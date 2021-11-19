@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   patch "reject", to: 'bookings#reject', as: :reject
   resources :listings do
     resources :bookings, only: [:new, :create]
-  end
-  resources :bookings, only: [] do
     resources :reviews, only: :create
   end
 end

@@ -21,7 +21,6 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
-    @review = Review.new
   end
 
   def create
@@ -51,6 +50,11 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @listing.destroy!
     redirect_to listings_path
+  end
+
+  def show_review
+    @listing = Listing.find(params[:id])
+    @review = Review.new  # <-- You need this now.
   end
 
   private

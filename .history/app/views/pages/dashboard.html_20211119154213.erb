@@ -54,44 +54,31 @@
         <td><%= ubooking.date_booking %></td>
         <td><%= ubooking.status %></td>
       </tr>
-
+      <tr>
+      <div id="reviews" class="my-4 font-italic">
+  <% if ubooking.reviews.blank? %>
+    Be the first to leave a review for <%= ubooking.listing.name %>
+  <% else %>
+    <% ubooking.reviews.each do |review| %>
+      <p><%= review.content %></p>
+    <% end %>
+  <% end %>
+  </div>
+      </tr>
       <tr>
 
-        <td><%= listing.name %></td>
-        <td class="show"><%= link_to 'Show', listing %></td>
-        <% if current_user == listing.user %>
-          <td class="edit"><%= link_to 'Edit', edit_listing_path(listing) %></td>
-          <td class="destroy"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+      <%= simple_form_for([ ubooking, @review ]) do |f| %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit %>
+      <% end %>
 
       </tr>
-
     <% end %>
     <% else %>
     <p>You don't have any bookings yet</p>
     <% end %>
   </tbody>
 </table>
-<% if @user_bookings %>
-<% @user_bookings.each do |ubooking| %>
-<div id="reviews" class="my-3 font-italic">
-      <% if ubooking.reviews.blank? %>
-        Be the first to leave a review for <%= ubooking.listing.name %>
-      <% else %>
-        <% ubooking.reviews.each do |review| %>
-          <p><%= review.content %></p>
-        <% end %>
-      <% end %>
-      </div>
-
-
-      <%= simple_form_for([ ubooking, @review ], remote: true) do |f| %>
-      <%= f.input :content, as: :text %>
-      <%= f.button :submit %>
-      <% end %>
 </div>
-
-<% end %>
-<% end %>
 </div>
 </div>

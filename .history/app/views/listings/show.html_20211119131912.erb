@@ -15,26 +15,26 @@
         <li><h6> <%= booking.date_booking%></h6></li>
       <% end %>
     </ul>
-    <div id="reviews" class="my-4 font-italic">
-  <% if @listing.reviews.blank? %>
+    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
+
+    <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
+    <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
+  </div>
+
+
+  <div id="reviews">
+  <% if @booking.reviews.blank? %>
     Be the first to leave a review for <%= @listing.name %>
   <% else %>
-    <% @listing.reviews.each do |review| %>
+    <% @booking.reviews.each do |review| %>
       <p><%= review.content %></p>
     <% end %>
   <% end %>
   </div>
-    <div class='btn btn-show mr-sm-4'><%= link_to "Back to all listings", listings_path %></div>
 
-    <% if current_user == @listing.user %>
-      <div class='btn btn-edit mr-sm-4'><%= link_to 'Edit', edit_listing_path(@listing) %></div>
-      <div class='btn btn-destroy mr-sm-4'><%= link_to "Delete listing", listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"}  %></div>
-    <% end %>
-  </div>
-
-
-
-
-
+  <%= simple_form_for([ @listing, @review ]) do |f| %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit %>
+<% end %>
 
 </div>
