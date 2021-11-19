@@ -33,6 +33,53 @@
 <div class="col">
 <h2>My bookings</h2>
 
+<div class="container">
+<div class="row">
+<div class="col-3"></div>
+<div class="col-3"></div>
+<div class="col-3"></div>
+<div class="col-3"></div>
+</div>
+<% if @user_bookings %>
+    <% @user_bookings.each do |ubooking| %>
+      <div class="row">
+      <div class="col-3"><%= ubooking.listing.name %></div>
+<div class="col-3"><%= ubooking.user.first_name %></div>
+<div class="col-3"><%= ubooking.date_booking %></div>
+<div class="col-3"><%= ubooking.status %></div>
+      </div>
+
+      <div class="row">
+      <div class="col">
+      <div id="reviews" class="my-3 font-italic">
+      <% if ubooking.reviews.blank? %>
+        Be the first to leave a review for <%= ubooking.listing.name %>
+      <% else %>
+        <% ubooking.reviews.each do |review| %>
+          <p><%= review.content %></p>
+        <% end %>
+      <% end %>
+      </div>
+
+
+      <%= simple_form_for([ ubooking, @review ], remote: true) do |f| %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit %>
+      <% end %>
+      </div>
+
+
+
+    <% end %>
+    <% else %>
+    <p>You don't have any bookings yet</p>
+    </div>
+    <% end %>
+
+
+</div>
+
+
 <table>
   <thead>
     <tr>
@@ -54,17 +101,8 @@
       </tr>
       </div>
 
-
-    <% end %>
-    <% else %>
-    <p>You don't have any bookings yet</p>
-    <% end %>
-  </tbody>
-</table>
-
-<% if @user_bookings %>
-<% @user_bookings.each do |ubooking| %>
-<div id="reviews" class="my-3 font-italic">
+      <div>
+      <div id="reviews" class="my-3 font-italic">
       <% if ubooking.reviews.blank? %>
         Be the first to leave a review for <%= ubooking.listing.name %>
       <% else %>
@@ -79,10 +117,16 @@
       <%= f.input :content, as: :text %>
       <%= f.button :submit %>
       <% end %>
+      </div>
 
 
-<% end %>
-<% end %>
+
+    <% end %>
+    <% else %>
+    <p>You don't have any bookings yet</p>
+    <% end %>
+  </tbody>
+</table>
 
 </div>
 </div>

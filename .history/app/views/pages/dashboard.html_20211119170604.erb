@@ -46,25 +46,15 @@
   <tbody>
   <% if @user_bookings %>
     <% @user_bookings.each do |ubooking| %>
-      <div><tr>
+      <tr>
         <td><%= ubooking.listing.name %></td>
         <td><%= ubooking.user.first_name %></td>
         <td><%= ubooking.date_booking %></td>
         <td><%= ubooking.status %></td>
       </tr>
-      </div>
-
-
-    <% end %>
-    <% else %>
-    <p>You don't have any bookings yet</p>
-    <% end %>
-  </tbody>
-</table>
-
-<% if @user_bookings %>
-<% @user_bookings.each do |ubooking| %>
-<div id="reviews" class="my-3 font-italic">
+      <tr>
+      <div>
+      <div id="reviews" class="my-3 font-italic">
       <% if ubooking.reviews.blank? %>
         Be the first to leave a review for <%= ubooking.listing.name %>
       <% else %>
@@ -79,10 +69,17 @@
       <%= f.input :content, as: :text %>
       <%= f.button :submit %>
       <% end %>
+      </div>
+      </tr>
 
 
-<% end %>
-<% end %>
+
+    <% end %>
+    <% else %>
+    <p>You don't have any bookings yet</p>
+    <% end %>
+  </tbody>
+</table>
 
 </div>
 </div>

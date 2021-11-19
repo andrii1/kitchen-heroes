@@ -15,6 +15,7 @@
   <% if @bookings_requests %>
     <% @bookings_requests.each do |booking| %>
       <tr>
+        <td><%= booking.listing.name %></td>
         <td><%= booking.user.first_name %></td>
         <td><%= booking.date_booking %></td>
         <td><%= booking.status %></td>
@@ -46,13 +47,13 @@
   <tbody>
   <% if @user_bookings %>
     <% @user_bookings.each do |ubooking| %>
-      <div><tr>
+      <tr>
         <td><%= ubooking.listing.name %></td>
         <td><%= ubooking.user.first_name %></td>
         <td><%= ubooking.date_booking %></td>
         <td><%= ubooking.status %></td>
       </tr>
-      </div>
+
 
 
     <% end %>
@@ -61,7 +62,6 @@
     <% end %>
   </tbody>
 </table>
-
 <% if @user_bookings %>
 <% @user_bookings.each do |ubooking| %>
 <div id="reviews" class="my-3 font-italic">
@@ -83,7 +83,6 @@
 
 <% end %>
 <% end %>
-
 </div>
 </div>
 </div>

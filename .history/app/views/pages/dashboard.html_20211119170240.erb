@@ -46,13 +46,30 @@
   <tbody>
   <% if @user_bookings %>
     <% @user_bookings.each do |ubooking| %>
-      <div><tr>
+      <tr>
         <td><%= ubooking.listing.name %></td>
         <td><%= ubooking.user.first_name %></td>
         <td><%= ubooking.date_booking %></td>
         <td><%= ubooking.status %></td>
       </tr>
+
+      <div id="reviews" class="my-3 font-italic">
+      <% if ubooking.reviews.blank? %>
+        Be the first to leave a review for <%= ubooking.listing.name %>
+      <% else %>
+        <% ubooking.reviews.each do |review| %>
+          <p><%= review.content %></p>
+        <% end %>
+      <% end %>
       </div>
+
+
+      <%= simple_form_for([ ubooking, @review ], remote: true) do |f| %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit %>
+      <% end %>
+
+
 
 
     <% end %>
@@ -61,7 +78,6 @@
     <% end %>
   </tbody>
 </table>
-
 <% if @user_bookings %>
 <% @user_bookings.each do |ubooking| %>
 <div id="reviews" class="my-3 font-italic">
@@ -83,7 +99,6 @@
 
 <% end %>
 <% end %>
-
 </div>
 </div>
 </div>
