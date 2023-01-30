@@ -45,3 +45,6 @@ yarn-debug.log*
 .env*
 node_modules
 npm-debug.log
+
+# Ignore history folder
+.history/*
